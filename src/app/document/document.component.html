@@ -1,0 +1,181 @@
+<div class="formmargin" id="container">
+  <div id="fab" class="fabbox">
+    <img src="assets/images/add.svg" style="width:16px;">
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutAlign="space-between center" class="box1">
+    <div class="box2" fxLayout="column" fxLayoutAlign="start start">
+      <div fxLayout="column" fxLayoutAlign="space-between end" class="tit1">
+        <span>Document Signed</span>
+        <div class="underline1"></div>
+      </div>
+      <div class="chart-container1">
+        <canvas id="canvas1"></canvas>
+      </div>
+        <div class="eclipse"><div fxLayout="column" fxLayoutAlign="center center"><span style="font-size: 21px;font-weight: 500;color: #485865;">90%</span><span style="font-size: 9px;color: #ee4057;font-weight: 500;">Efficiency</span></div></div>
+    </div>
+    <div class="box2" fxLayout="column" fxLayoutAlign="start start">
+      <div fxLayout="column" fxLayoutAlign="space-between end" class="tit1">
+        <span>Signing Process</span>
+        <div class="underline2"></div>
+      </div>
+      <div class="chart-container1">
+        <canvas id="canvas2"></canvas>
+      </div>
+        <div class="eclipse"><span style="font-size: 21px;font-weight: 500;color: #485865;">90%</span></div>
+    </div>
+    <div class="box3" fxLayout="row" fxLayoutAlign="start start">
+      <div fxLayout="column" fxLayoutAlign="start start">
+        <div fxLayout="column" fxLayoutAlign="space-between end" class="tit1">
+          <span>Sign Process</span>
+          <div class="underline3"></div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" style="margin-top:1rem;">
+          <div class="circle_orange"></div>
+          <span class="pielegendtxt">Draft</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" style="margin-top:0.6rem;">
+          <div class="circle_blue"></div>
+          <span class="pielegendtxt">Released</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" style="margin-top:0.6rem;">
+          <div class="circle_black"></div>
+          <span class="pielegendtxt">Signing</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" style="margin-top:0.6rem;">
+          <div class="circle_green"></div>
+          <span class="pielegendtxt">Completed</span>
+        </div>
+      </div>
+      <div class="chart-container" fxLayout="column" fxLayoutAlign="space-between start">
+        <canvas id="canvas"></canvas>
+        <span class="pieheading">Signing Process Stat</span>
+      </div>
+    </div>
+    <div class="box4" fxLayout="column" fxLayoutAlign="start start" id="container1">
+      <div fxLayout="column" fxLayoutAlign="space-between end" class="tit1">
+        <span>Active Tags</span>
+        <div class="underline4"></div>
+      </div>
+        <div id="fab1" class="fabbox1">
+            <img src="assets/images/add.svg" style="width:10px;">
+          </div>
+
+<div class="tagbox" fxLayout="row wrap" fxLayoutAlign="center start">
+<div class="tags" fxLayout="row" fxLayoutAlign="start center">
+<span class="tagtxt">Employee Letter</span>
+<img src="assets/images/add (1).svg" style="width:14px;margin-left: 0.5rem;margin-right: 0.5rem;">
+</div>
+<div class="tags" fxLayout="row" fxLayoutAlign="start center">
+<span class="tagtxt">Contacts</span>
+<img src="assets/images/add (1).svg" style="width:14px;margin-left: 0.5rem;margin-right: 0.5rem;">
+</div>
+<div class="tags" fxLayout="row" fxLayoutAlign="start center">
+<span class="tagtxt">Invoices</span>
+<img src="assets/images/add (1).svg" style="width:14px;margin-left: 0.5rem;margin-right: 0.5rem;">
+</div>
+<div class="tags" fxLayout="row" fxLayoutAlign="start center">
+<span class="tagtxt">HR Documents</span>
+<img src="assets/images/add (1).svg" style="width:14px;margin-left: 0.5rem;margin-right: 0.5rem;">
+</div>
+<div class="tags" fxLayout="row" fxLayoutAlign="start center">
+<span class="tagtxt">Vendor Contracts</span>
+<img src="assets/images/add (1).svg" style="width:14px;margin-left: 0.5rem;margin-right: 0.5rem;">
+</div>
+<div class="tags" fxLayout="row" fxLayoutAlign="start center">
+<span class="tagtxt">Finance Documents</span>
+<img src="assets/images/add (1).svg" style="width:14px;margin-left: 0.5rem;margin-right: 0.5rem;">
+</div>
+</div>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center" style="margin-top:1.5rem;">
+    <div fxLaout="row" fxLayoutAlign="start center" class="searchbar">
+      <img src="assets/images/search.svg" style="width:18px;margin-left: 1rem;margin-right: 1rem;">
+      <input placeholder="Search" class="inputfield">
+    </div>
+    <div fxLaout="row" fxLayoutAlign="space-between center" class="mainselect">
+      <span style="margin-left:1rem;color: #080808;">All</span>
+      <img src="assets/images/play-button-arrowhead.svg" style="width:12px;margin-right:1rem">
+    </div>
+  </div>
+
+  <mat-table [dataSource]="dataSource" class="tableborder">
+
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef class="headercolor alignhead">Document Title</mat-header-cell>
+      <mat-cell *matCellDef="let element;index as i" class="alignbox">
+        <div fxLayout="row" fxLayoutAlign="space-evenly center">
+          <div class="divbox" [ngStyle]="{'background-color':i%2==0 ? '#d87e39' : '#6f52ed'}"></div>
+          <label class="boldtext">{{element.title}}</label>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="author">
+      <mat-header-cell *matHeaderCellDef class="headercolor aligncenter" style="margin-left: -6%;margin-right: 6%;">
+        Author</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="aligncenter" style="font-size:13px;margin-left: -6%;margin-right: 6%;">
+        {{element.author}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef class="headercolor" style="margin-left: -5%;margin-right: 5%;"> Date
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element" class="boldtext" style="margin-left: -5%;margin-right: 5%;"> {{element.date}}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="fulfilment">
+      <mat-header-cell *matHeaderCellDef class="headercolor aligncenter" style="margin-left: -5%;margin-right: 5%;">
+        Fulfilment</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="aligncenter" style="margin-left: -5%;margin-right: 5%;">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <div fxLayout="row" fxLayoutAlign="start center" style="width: 90%;">
+            <div class="round"></div>
+            <div class="bar cwidth"></div>
+            <div class="bar2"></div>
+            <div class="round1"></div>
+            <div class="bar2"></div>
+            <div class="bar1 cwidth"></div>
+            <div class="round2"></div>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="space-between center" style="width:100%;">
+            <span class="prgr">Released</span>
+            <span class="po">In Signing</span>
+            <span class="prgr">Completed</span>
+          </div>
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="signed">
+      <mat-header-cell *matHeaderCellDef class="headercolor aligncenter"> Signed</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="boldtext aligncenter">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.5rem">
+          <span>{{element.signed}}</span>
+          <img src="assets/images/info.svg" style="width:12px;">
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="completeby">
+      <mat-header-cell *matHeaderCellDef class="headercolor aligncenter"> Complete By</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="boldtext aligncenter"> {{element.completeby}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef class="headercolor aligncenter"> Action</mat-header-cell>
+      <mat-cell *matCellDef="let element" class="aligncenter">
+        <div fxLaout="row" fxLayoutAlign="space-between center" class="cellselect">
+          <span style="margin-left:1rem;color: #080808;font-size:13px;">Actions</span>
+          <img src="assets/images/play-button-arrowhead.svg" style="width:10px;margin-right:1rem">
+        </div>
+      </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns" class="colheader"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+</div>

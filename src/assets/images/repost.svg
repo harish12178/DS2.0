@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.153" height="35.153" viewBox="0 0 35.153 35.153">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="repost" opacity="0.4" transform="translate(-1 -1)">
+        <g id="Group_1291" data-name="Group 1291" transform="translate(1 1)">
+            <path id="Path_1044" d="M32.534 20.008a1.648 1.648 0 0 0-1.648 1.648v6.033h-4.261l.483-.482a1.648 1.648 0 0 0-2.33-2.33l-3.3 3.3a1.647 1.647 0 0 0 0 2.33l3.3 3.3a1.648 1.648 0 0 0 2.33-2.33l-.483-.483h5.909a1.648 1.648 0 0 0 1.648-1.648v-7.69a1.648 1.648 0 0 0-1.648-1.648z" class="cls-2" data-name="Path 1044" transform="translate(.97 .873)"/>
+            <path id="Path_1045" d="M13.7 4.778l-3.3-3.3a1.648 1.648 0 1 0-2.33 2.33l.482.483H2.648A1.648 1.648 0 0 0 1 5.943v7.7a1.648 1.648 0 1 0 3.3 0V7.591h4.262l-.49.491a1.648 1.648 0 0 0 2.333 2.329l3.3-3.3a1.65 1.65 0 0 0-.005-2.333z" class="cls-2" data-name="Path 1045" transform="translate(-1 -1)"/>
+            <path id="Path_1046" d="M34.675 10.337A9.337 9.337 0 1 1 25.337 1a9.351 9.351 0 0 1 9.338 9.337z" class="cls-2" data-name="Path 1046" transform="translate(.478 -.999)"/>
+            <path id="Path_1047" d="M19.675 25.337A9.337 9.337 0 1 1 10.337 16a9.344 9.344 0 0 1 9.338 9.337z" class="cls-2" data-name="Path 1047" transform="translate(-1 .478)"/>
+        </g>
+    </g>
+</svg>
