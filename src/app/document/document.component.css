@@ -317,17 +317,18 @@ width: 11px;
 color: #505050;
 }
 .pieheading{
-color: #191919;
-font-size: 14px;
-    padding-left: 40px;
-letter-spacing: .3px;
+  color: #191919;
+    font-size: 13px;
+    padding-left: 57px;
+    letter-spacing: .3px;
+    font-weight: 500;
 }
 .chart-container{
-margin-top: 28px;
-    width: 215px;
-    margin-left: 0.5rem;
-    margin-right: -2rem;
-height: 142px;
+  margin-top: 28px;
+  width: 240px;
+  margin-left: -14px;
+  margin-right: -4rem;
+  height: 142px;
 }
 .chart-container1{
 margin-top: 1.2rem;

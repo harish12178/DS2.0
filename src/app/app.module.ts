@@ -10,6 +10,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
 import { ChartsModule } from 'ng2-charts';
+import 'chartjs-plugin-labels';
 
 import { DocumentComponent } from './document/document.component';
 
